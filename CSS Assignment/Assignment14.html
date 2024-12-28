@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+        /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling the Product Card */
+.product-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;  /* Ensures that image is contained within the rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow around the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for hover effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Image Styling */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;  /* Ensures image fills the space and maintains aspect ratio */
+}
+
+/* Product Info Container Styling */
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Title Styling */
+.product-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Description Styling */
+.product-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Price Styling */
+.product-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #e74c3c;  /* Price in red */
+}
+
+/* Hover Effect */
+.product-card:hover {
+    transform: scale(1.05);  /* Slightly enlarge the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Increase the shadow on hover */
+}
+
+        </style>
+    
+</head>
+<body>
+
+    <div class="product-card">
+        <img src="https://mojo.generalmills.com/api/public/content/uK7YQwWbBEakjH1Dq59YVQ_gmi_hi_res_jpeg.jpeg?v=c4624996&t=1cfcc0a09ea348e0b53b953eb7705409" alt="Product Image" class="product-image">
+        <div class="product-info">
+            <h2 class="product-title">Product Name</h2>
+            <p class="product-description">This is a brief description of the product. It explains what the product is and what makes it special.</p>
+            <p class="product-price">Rs 1000</p>
+        </div>
+    </div>
+
+</body>
+</html>

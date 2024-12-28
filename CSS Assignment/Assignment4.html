@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Styled Lists</title>
+    <style>
+       
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 20px;
+}
+
+
+.custom-ol, .custom-ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+
+.custom-ol li {
+    counter-increment: list-counter; 
+    padding-left: 30px;
+    position: relative;
+    font-style: italic; 
+    color: #007BFF; 
+}
+
+.custom-ol li::before {
+    content: counter(list-counter) ". "; 
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+
+.custom-ul li {
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+    font-style: italic; 
+    color: #28a745; 
+}
+
+.custom-ul li::before {
+    content: "\2022"; 
+    position: absolute;
+    left: 0;
+    color: #28a745; 
+    font-size: 1.2em;
+}
+
+    </style>
+</head>
+<body>
+    <h1>My Favorite Fruits</h1>
+    <ol class="custom-ol">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+    </ol>
+
+    <h1>Shopping List</h1>
+    <ul class="custom-ul">
+        <li>Milk</li>
+        <li>Bread</li>
+        <li>Cheese</li>
+    </ul>
+</body>
+</html>

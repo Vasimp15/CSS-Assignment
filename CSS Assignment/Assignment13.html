@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Box Animation</title>
+    <style>
+        /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling for the moving box */
+.moving-box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db; /* Initial color */
+    border-radius: 10px;
+    animation: moveBox 3s linear infinite, colorChange 3s linear infinite;
+}
+
+/* Animation to move the box from left to right */
+@keyframes moveBox {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(80vw); /* Move to the right, 80% of viewport width */
+    }
+}
+
+/* Animation to change the color of the box */
+@keyframes colorChange {
+    0% {
+        background-color: #3498db; /* Initial color (blue) */
+    }
+    50% {
+        background-color: #e74c3c; /* Midway color (red) */
+    }
+    100% {
+        background-color: #3498db; /* Back to initial color (blue) */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="moving-box"></div>
+
+</body>
+</html>

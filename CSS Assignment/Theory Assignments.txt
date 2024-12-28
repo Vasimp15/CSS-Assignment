@@ -1,0 +1,86 @@
+1	Explain the difference between inline, internal, and external CSS. 
+a.Inline CSS
+Definition: CSS styles are applied directly to an individual HTML element using the style attribute.
+Advantages:
+* Quick and easy for small changes or testing.
+* Styles apply only to the specific element, which reduces the risk of unintended side effects.
+Disadvantages:
+* Difficult to maintain and update for larger projects.
+* Repetitive, as styles need to be rewritten for each element.
+* Poor separation of content and design.
+
+b. Internal CSS
+Definition: CSS rules are placed within a <style> tag in the <head> section of an HTML document. These styles apply to elements within the same document.
+Advantages:
+* Useful for styling a single HTML document.
+* Allows for better organization compared to inline CSS.
+* Styles are applied to multiple elements in the same document using selectors.
+Disadvantages:
+* Not reusable across multiple HTML files.
+* Can make the HTML document bulky.
+
+c. External CSS
+Definition: CSS is written in a separate .css file and linked to the HTML document using a <link> tag in the <head>section.
+
+Advantages:
+* Reusable across multiple HTML files, reducing redundancy.
+* Promotes better separation of content (HTML) and design (CSS).
+* Easier to maintain and update styles for large projects.
+Disadvantages:
+* Requires an additional HTTP request to fetch the CSS file.
+* Styles won’t be applied if the CSS file is unavailable or not loaded correctly.
+
+2.Describe CSS selectors and list the types of selectors (e.g., element, class, id). 
+
+
+CSS Selectors:
+CSS selectors are patterns used to select and apply styles to specific HTML elements on a webpage. They define which elements a style rule should apply to. By combining different types of selectors, you can target elements with precision.
+
+Types of CSS Selectors
+Here’s a list of commonly used CSS selectors and their descriptions:
+
+1. Universal Selector
+* Description: Selects all elements on a page.
+* Syntax: *
+* 
+* 2. Element (Type) Selector
+* Description: Selects all elements of a specific type (e.g., all <p> or <h1> elements).
+* Syntax: element
+
+3. Class Selector
+* Description: Selects all elements with a specific class attribute. A class can be used for multiple elements.
+* Syntax: .className
+
+4. ID Selector
+* Description: Selects an element with a specific id attribute. IDs are unique and should only be used once per page.
+
+
+3.Discuss the CSS box model and its components. 
+
+The CSS box model is a fundamental concept that describes how every HTML element is rendered as a rectangular box on the web. It defines the structure and spacing around elements and determines how content, padding, borders, and margins interact.
+The box model consists of the following components (from the innermost to the outermost):
+
+1. Content
+* Description: The area where text, images, or other content is displayed.
+* Properties:
+    * Dimensions of the content can be controlled using width and height.
+
+2. Padding
+* Description: The space between the content and the element's border.
+* Key Points:
+    * Adds inner spacing around the content.
+    * Background color (if applied) extends into the padding area.
+* Properties:
+    * padding-top, padding-right, padding-bottom, padding-left (or shorthand padding).
+
+3. Border
+* Description: A line that wraps around the padding and content.
+* Key Points:
+    * Separates the padding from the margin.
+    * Can be styled using border-width, border-style, and border-color (or shorthand border).
+4. Margin
+* Description: The outermost space around the element that separates it from other elements.
+* Key Points:
+    * Creates space between elements on the page.
+    * Margins are transparent and do not have a background color.
+    * Margins can collapse in certain situations (e.g., vertical margins of adjacent elements).

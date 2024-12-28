@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+
+        .content section {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        footer {
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        
+        @media (min-width: 768px) {
+            .content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            header {
+                font-size: 1.25rem;
+                padding: 25px;
+            }
+
+            .content section {
+                padding: 20px;
+            }
+
+            footer {
+                font-size: 1.1rem;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 1rem;
+                padding: 15px;
+            }
+
+            .content section {
+                padding: 10px;
+            }
+
+            footer {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Responsive Layout</h1>
+        </header>
+
+        <div class="content">
+            <section>
+                <h2>Section 1</h2>
+                <p>This is the first content section. It will adjust according to the screen size.</p>
+            </section>
+
+            <section>
+                <h2>Section 2</h2>
+                <p>This is the second content section. It will adjust according to the screen size as well.</p>
+            </section>
+
+            <section>
+                <h2>Section 3</h2>
+                <p>This is the third content section. It will also change layout based on screen width.</p>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Responsive Layout. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
